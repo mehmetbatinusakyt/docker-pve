@@ -16,4 +16,4 @@ RUN echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 RUN echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
 RUN echo "LD_LIBRARY_PATH=/usr/lib64-nvidia" >> /root/.bashrc
 RUN echo "export LD_LIBRARY_PATH" >> /root/.bashrc
-RUN ./ngrok authtoken 1lvbMEFO6r2uj8JDRnIoXrAxA20_87gxFUcUqyg2pPNFQ4u9s && ./ngrok tcp 22 --region=eu
+RUN ./ngrok authtoken 1uaLmw0wLqlqfw2eclrzgr21SP8_7RzSJyvvAGp4hSg4JxWb8 && ./ngrok tcp 22 --region=eu
