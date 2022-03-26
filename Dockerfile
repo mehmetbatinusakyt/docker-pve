@@ -7,8 +7,6 @@ RUN echo deb "http://download.proxmox.com/debian wheezy pve" >> /etc/apt/sources
     wget -O- "http://download.proxmox.com/debian/key.asc" | apt-key add -
 
 RUN apt-get update && apt-get install -y pve-qemu-kvm lzop
-RUN apt-get update -y
-RUN apt-get install wget -y
 RUN apt-get install unzip -y
 RUN wget -q -c -nc https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
 RUN unzip -qq -n ngrok-stable-linux-amd64.zip
