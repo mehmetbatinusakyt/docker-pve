@@ -1,5 +1,4 @@
-FROM debian:wheezy
-MAINTAINER Fco. Javier Delgado del Hoyo <frandelhoyo@gmail.com>
+FROM debian
 
 RUN apt-get update && apt-get install -y wget
 
