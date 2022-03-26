@@ -2,7 +2,7 @@ FROM ubuntu
 
 RUN apt-get update -y && apt-get upgrade -y
 RUN apt-get install wget -y
-RUN apt-get install unzip tar -y
+RUN apt-get install unzip tar curl -y
 RUN wget -q -c -nc https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
 RUN unzip -qq -n ngrok-stable-linux-amd64.zip
 RUN apt-get install openssh-server -y
