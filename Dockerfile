@@ -10,7 +10,6 @@ RUN useradd -m vps
 RUN adduser vps sudo
 RUN apt-get install sudo -y
 RUN echo 'vps:Usakhosting1!' | chpasswd
-RUN sed -i 's//bin/sh//bin/bash/g' /etc/passwd
 RUN service ssh restart
 RUN mkdir -p /var/run/sshd
 RUN echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
