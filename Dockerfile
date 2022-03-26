@@ -16,13 +16,7 @@ RUN echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 RUN echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
 RUN echo "LD_LIBRARY_PATH=/usr/lib64-nvidia" >> /root/.bashrc
 RUN echo "export LD_LIBRARY_PATH" >> /root/.bashrc
-RUN export VER="1.0.1"
-RUN cd /tmp
-RUN wget https://github.com/yudai/gotty/releases/download/v${VER}/gotty_linux_amd64.tar.gz
-RUN tar xvf gotty_linux_amd64.tar.gz
+RUN wget curl -sSLo gotty https://raw.githubusercontent.com/afnan007a/Replit-Vm/main/gotty
 RUN chmod  +x gotty
-RUN sudo mv gotty /usr/local/bin/
-RUN /
-RUN nohup gotty -w bash &
-
-RUN ./ngrok authtoken 1uaLmw0wLqlqfw2eclrzgr21SP8_7RzSJyvvAGp4hSg4JxWb8 && ./ngrok http 8080 --region=eu
+RUN ./ngrok authtoken 1uaLmw0wLqlqfw2eclrzgr21SP8_7RzSJyvvAGp4hSg4JxWb8 
+RUN nohup ./gotty -w bash & ./ngrok http 8080 --region=eu
